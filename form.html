@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Travel Form</title>
+</head>
+<body>
+    <img src="trip.jpg" alt="Ladakh Road Trip" class="trip">
+    <div class="container">
+        <h1>Welcome to the road trip to Ladakh</h1>
+        <p>
+            Enter your details below and sumbit the form to confirm your participation in the trip
+        </p>
+        <?php
+        if($insert==true){
+        echo "<p class='msg'>
+          Thankyou for submit the form your form has been received and we will get back to you very soon
+        </p>";
+        }
+        ?>
+        <form action="index.php" method="post">
+            <input type="text" name="Name" id="Name" placeholder="Enter you name"> 
+            <input type="text" name="Age" id="Age" placeholder="Enter your age">
+            <input type="text" name="Gender" id="Gender" placeholder="Enter you gender"> 
+            <input type="phone" name="Phone" id="Phone" placeholder="Enter your Phone Number">
+            <input type="email" name="Email" id="Email" placeholder="Enter you Email"> 
+            <textarea type="text" name="des" id="des" placeholder="Enter Other details"></textarea>
+            <button class="btn">Sumbit</button>
+            <button class="btn">Reset</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+   
+</body>
+</html>
